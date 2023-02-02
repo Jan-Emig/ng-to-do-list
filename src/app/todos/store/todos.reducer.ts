@@ -18,7 +18,11 @@ export const todosReducer = createReducer(
     return { ...state, todos: [...state.todos, todo]}
   }),
   on(TodoActions.SetTodos, (state, action) => {
-    console.log(action);
     return { ...state, todos: action.payload }
-  })
+  }),
+  on(TodoActions.UpdateTodo, (state, action) => {
+    const todos = [...state.todos];
+    todos[action.payload.id] = action.payload.todo;
+    return { ...state, todos};
+  }),
 );

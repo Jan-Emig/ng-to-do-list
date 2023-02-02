@@ -1,5 +1,5 @@
-<ul class="list-disc">
-  <li *ngFor="let todo of todos">
-    <app-to-do-item [todo]="todo"></app-to-do-item>
-  </li>
-</ul>
+<div class="container mx-auto flex items-center mt-10 text-gray-300">
+  <div class="mx-auto">
+    <app-to-do-item *ngFor="let todo of todos; let id = index" [todo]="todo" [id]="id"></app-to-do-item>
+  </div>
+</div>

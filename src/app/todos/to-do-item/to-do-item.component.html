@@ -1,1 +1,6 @@
-<li>{{ todo?.title}}</li>
+<div class="mt-2">
+  <label>
+    <input type="checkbox" [checked]="todo?.completed" (change)="onCompletedToggle()" class=" default:bg-white indeterminate:bg-white checked:bg-teal-500">
+    {{ todo?.title}}
+  </label>
+</div>

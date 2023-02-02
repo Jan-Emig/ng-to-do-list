@@ -13,6 +13,7 @@ import { ToDoListComponent } from './todos/to-do-list/to-do-list.component';
 import { ToDoItemComponent } from './todos/to-do-item/to-do-item.component';
 import { EffectsModule } from '@ngrx/effects';
 import TodosEffects from './todos/store/todos.effects';
+import { AddTodoComponent } from './todos/add-todo/add-todo.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import TodosEffects from './todos/store/todos.effects';
     HeaderComponent,
     ToDoListComponent,
     ToDoItemComponent,
+    AddTodoComponent,
   ],
   imports: [
     BrowserModule,

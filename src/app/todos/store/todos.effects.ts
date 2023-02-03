@@ -12,9 +12,9 @@ export default class TodosEffects {
     ofType(fromTodosActions.FETCH_TODOS),
     switchMap(() => {
       return of([
-        new Todo('First todo', 'This is the first todo'),
-        new Todo('Second todo', 'This is the second todo'),
-        new Todo('Third todo', 'This is the third todo')
+        new Todo(0, 'First todo', 'This is the first todo'),
+        new Todo(1, 'Second todo', 'This is the second todo'),
+        new Todo(2, 'Third todo', 'This is the third todo')
       ]);
     }),
     map(todos => ({ type: fromTodosActions.SET_TODOS, payload: todos }))
